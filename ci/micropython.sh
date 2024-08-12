@@ -14,7 +14,7 @@ function log_warning {
 
 function micropython_clone {
     log_inform "Using MicroPython $MICROPYTHON_VERSION"
-    git clone https://github.com/micropython/micropython
+    git clone https://github.com/dps/micropython
     cd micropython
     git checkout $MICROPYTHON_VERSION
     git cherry-pick -n 932f76c6ba64c5a3e68de3324556d9979f09303b
@@ -25,7 +25,8 @@ function micropython_clone {
     git submodule update --init lib/micropython-lib
     git submodule update --init lib/tinyusb
     git submodule update --init lib/btstack
-    cd ../
+    git submodule update --init lib/pico-extras
+    cd ../../
 }
 
 function micropython_build_mpy_cross {
