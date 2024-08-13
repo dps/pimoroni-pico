@@ -26,7 +26,7 @@ function micropython_clone {
     git submodule update --init lib/tinyusb
     git submodule update --init lib/btstack
     git submodule update --init lib/pico-extras
-    cd ../../
+    cd ../
 }
 
 function micropython_build_mpy_cross {
